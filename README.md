@@ -52,7 +52,7 @@
 ### Association
 - has_many :product_images
 - has_many :product_categorys
-- has_many :category, through: :product＿categorys
+- has_many :category, through: :product_categorys
 - belongs_to :user
 
 
@@ -74,4 +74,4 @@
 
 ### Association
 - has_many :product_categorys
-- has_many :products, through: :product＿categorys
+- has_many :products, through: :product_categorys

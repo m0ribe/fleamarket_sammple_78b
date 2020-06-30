@@ -21,7 +21,7 @@
 |phone number|string||
 
 ### Association
-- has_many :product
+- has_many :products
 - has_one :card
 
 
@@ -50,10 +50,11 @@
 |lead_time|string|null: false|
 
 ### Association
-- has_many :product_image
-- has_many :product_category
-- has_many :category, through: :product＿category
+- has_many :product_images
+- has_many :product_categorys
+- has_many :category, through: :product＿categorys
 - belongs_to :user
+
 
 ## Product＿Categoryテーブル
 |Column|Type|Options|
@@ -64,10 +65,13 @@
 ### Association
 - belongs_to :product
 - belongs_to :category
+
+
 ## Categoryテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 
 ### Association
-- belongs_to :product＿category
+- has_many :product_categorys
+- has_many :products, through: :product＿categorys
